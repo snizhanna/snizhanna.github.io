@@ -2,34 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна</title>
   <link rel="stylesheet" href="menu.css">
-  <link rel="stylesheet" href="vilhuk.html">
-  <link rel="stylesheet" href="katalog.html">
+  <link rel="stylesheet" href="index2.html">
+  <link rel="stylesheet" href="index3.html">
 <style>
+  html, body {
+    height: 100%;
+  }
   #div-1
   {
     position: absolute;
-    top: 150px;
-    left: 10px;
+    top: 10%;
+    left: 5%;
   }
   #div-2
   {
-  position: absolute;
-    top:400px;
-    left: 550px;
+  position: relative;
+    float: left;
+    top: 1%;
+    left: 29%;
   }
   #div-3
   {
-    position: absolute;
-    top: 550px;
-    left: 1050px;
+    position: relative;
+    float: left;
+    top: 35%;
+    left: 30%;
   }
   #div-4
   {
     position: absolute;
     top: 980px;
     left: 20px;
+  }
+  . headerfixed
+   {
+    width:100%;
+    position:fixed;
+    top:0;
+    z-index:1000;
+  }
+
+  . pusto
+  {
+    height:100px;
   }
 
   . p
@@ -42,19 +61,20 @@
 </head>
 <body background="fon.png">
 
+<div class="headerfixed">
 <nav class="top-menu">
   <ul class="menu-main">
     <li class="left-item"><a href="index.html">Головна</a></li>
-    <li class="left-item"><a href="katalog.html">Каталог</a></li>
-    <li class="left-item"><a href="vilhuk.html">Відгуки</a></li>
+    <li class="left-item"><a href="index2.html">Каталог</a></li>
+    <li class="left-item"><a href="index3.html">Відгуки</a></li>
     <li class="right-item"><a href="">Контакти</a></li>
     <li class="right-item"><a href="">Корзина</a></li>
     <li class="right-item"><a href="">Аксесуари</a></li>
-
-
   </ul>
   <a class="navbar-logo" href=""><img src="кросовок.png" width="130" height="75"></a>
 </nav>
+</div>
+<div class=”pusto”></div>
 <div align="center"><img src="logo1.png"  width="650" height="300"></div>
 
 <div id="div-1"><img src="75391840-zapatos-rojos-sexy-zapatos-de-tacón-alto-sobre-fondo-blanco-.jpg" width="450" height="280">
@@ -80,9 +100,11 @@
   <img src="e50c2fd9240488200acf8fc08ef5.jpg" width="150" height="80">
   <span>- 20% скидка<br /> Декоративный френч</span>
 </div>-->
+
 <div id="div-4">
 <p>Знайдіть нас</p>
 <a href="https://www.facebook.com/" target="_blank"><img src="Facebook_icon-icons.com_66933.png" height="51" width="51"></a>
 </div>
+
 </body>
 </html>
