@@ -2,23 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Відгуки</title>
 
   <link rel="stylesheet" href="menu.css">
   <link rel="stylesheet" href="index.html">
   <link rel="stylesheet" href="katalog.html">
+  <link rel="stylesheet" href="proba.js">
+  <link rel="stylesheet" href="vilhuk.html">
+  <link href='https://fonts.google.com/specimen/Sansita?selection.family=Sansita' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-grid.css">
+  <link rel="stylesheet" href="bootstrap-reboot.css">
+  <link rel="stylesheet" href="myScript.js">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <style>
 
-    .box1
+    . box1
     {
       width: 400px;
       height: 200px;
+      border: 5px solid #005cbf;
     }
     h1{
       color: #1E90FF;
       font-size : 90px;
       text-align : center;
     }
+
 </style>
 </head>
 <body background="fon.png">
@@ -30,15 +44,57 @@
     <li class="left-item"><a href="vilhuk.html">Відгуки</a></li>
     <li class="right-item"><a href="">Контакти</a></li>
     <li class="right-item"><a href="">Корзина</a></li>
-    <li class="right-item"><a href="">Аксесуари</a></li>
+    <li class="right-item"><a href="spysokfoto.html">Аксесуари</a></li>
 
 
   </ul>
   <a class="navbar-logo" href=""><img src="кросовок.png" width="130" height="75"></a>
 </nav>
-<h1>Залиште свої коментарі</h1>
+<h1> <p id="demo">Залиште свої коментарі</p></h1>
 
 <div class="box1">
-  <textarea rows="10" cols="50">  </textarea>
+  <textarea rows="10" cols="50">  </textarea></div>
+
+
+<form name="myForm">
+
+  <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Розмір шрифта</button>
+
+  <button type="button" onclick="document.getElementById('demo').style.color='red'">Колір</button>
+
+  <button type="button" onclick="addOption()">Додати до списку</button>
+  <!--<button type="button" onclick="myFunction()">Add</button>-->
+    <br>
+
+
+
+  <select name="language" size=10 style="color: #007bff">
+        <option value="Елемент 1">Елемент-1</option>
+
+  </select>
+
+</form>
+<script>
+    //addButton = document.myForm.;
+    var
+    languagesSelect = document.myForm.language;
+
+
+    // обработчик добавления элемента
+    function addOption(){
+      i = languagesSelect.options.length + 1;
+      if (i<=100){languagesSelect.options.add(new Option("Елемент-"+i));}
+
+  }
+
+  addButton.addEventListener("click", addOption);
+
+
+
+
+</script>
+
+
+
 </body>
 </html>

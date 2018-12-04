@@ -1,110 +1,227 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна</title>
+  <title>Гaл</title>
   <link rel="stylesheet" href="menu.css">
   <link rel="stylesheet" href="index2.html">
-  <link rel="stylesheet" href="index3.html">
-<style>
-  html, body {
-    height: 100%;
-  }
-  #div-1
-  {
-    position: absolute;
-    top: 10%;
-    left: 5%;
-  }
-  #div-2
-  {
-  position: relative;
-    float: left;
-    top: 1%;
-    left: 29%;
-  }
-  #div-3
-  {
-    position: relative;
-    float: left;
-    top: 35%;
-    left: 30%;
-  }
-  #div-4
-  {
-    position: absolute;
-    top: 980px;
-    left: 20px;
-  }
-  . headerfixed
-   {
-    width:100%;
-    position:fixed;
-    top:0;
-    z-index:1000;
-  }
+  <link rel="stylesheet" href="vilhuk.html">
+  <link rel="stylesheet" href="style111.css">
+  <link href='https://fonts.google.com/specimen/Sansita?selection.family=Sansita' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-grid.css">
+  <link rel="stylesheet" href="bootstrap-reboot.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    html,
+    body {
+      height: 100%;
+      color: #1E90FF;
+    }
 
-  . pusto
-  {
-    height:100px;
-  }
+    #grad1 {
 
-  . p
-  {
-    color:#1E90FF ;
-    size: 130px;
-  }
-</style>
+      background-image: linear-gradient(to bottom right,#005cbf, #b3d4fc);
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .content {
+      flex: 1 0 auto;
+    }
+    .footer {
+      padding: 5px;
+      left: 0; bottom: 0; /
+    color: #fff; /* Цвет текста */
+      width: 100%;
+      border: 1px solid #b3d4fc;
+    }
+
+    p
+    {font-family: 'Sansita', sans-serif;
+
+    }
+    . container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      border: 5px solid #b3d4fc ;
+    }
+
+
+      @media screen and (min-width: 300px) {
+        div {
+          font-size: 50px;
+          color: #005c;
+        .responsive {
+          width: 49.99999%;
+          margin: 6px 0;
+
+        }
+    }
+
+
+        @media screen and (min-width: 600px)  {
+          div {
+            font-size: 55px;
+            color: #005cbf;
+          }
+          . photo {
+            width: 60%;
+            float: left;
+            margin-bottom: auto;
+          }
+
+        }
+        div.gallery img {
+          width: 100%;
+          height: auto;
+        }
+
+        div.desc {
+          padding: 0;
+          text-align: center;
+        }
+
+
+        .responsive {
+          padding: 0 6px;
+          float: left;
+          width: 24.99999%;
+        }
+        . row{
+          width: 100%;
+        }
+
+
+        @media only screen and (max-width: 760px) {
+          .responsive {
+            width: 49.99999%;
+            margin: 6px 0;
+
+          }
+        }
+
+        @media only screen and (max-width: 400px) {
+          .responsive {
+            width: 100%;
+          }
+        }
+
+  </style>
 
 </head>
 <body background="fon.png">
+<div>
+  <div class="wrapper">
 
-<div class="headerfixed">
-<nav class="top-menu">
-  <ul class="menu-main">
-    <li class="left-item"><a href="index.html">Головна</a></li>
-    <li class="left-item"><a href="index2.html">Каталог</a></li>
-    <li class="left-item"><a href="index3.html">Відгуки</a></li>
-    <li class="right-item"><a href="">Контакти</a></li>
-    <li class="right-item"><a href="">Корзина</a></li>
-    <li class="right-item"><a href="">Аксесуари</a></li>
-  </ul>
-  <a class="navbar-logo" href=""><img src="кросовок.png" width="130" height="75"></a>
-</nav>
+    <header>
+      <img src="кросовок.png"  align="left" width="130" height="75">
+      <div align="center"><img src="logo1.png"  width="250" height="100" align="center"></div>
+
+      <nav  class="top-menu">
+        <ul class="menu-main">
+          <li class="left-item"><a  href="index.html">Головна</a></li>
+          <li class="left-item"><a href="index2.html">Каталог</a></li>
+          <li class="left-item"><a href="vilhuk.html">Відгуки</a></li>
+          <li class="right-item"><a href="">Контакти</a></li>
+          <li class="right-item"><a href="">Корзина</a></li>
+          <li class="right-item"><a href="spysokfoto.html">Аксесуари</a></li>
+        </ul>
+        <a class="navbar-logo" href=""><img src="кросовок.png" width="130" height="75"></a>
+      </nav>
+    </header>
+
+  </div>
 </div>
-<div class=”pusto”></div>
-<div align="center"><img src="logo1.png"  width="650" height="300"></div>
+<div class="content">
+  <div class="container-fluid">
 
-<div id="div-1"><img src="75391840-zapatos-rojos-sexy-zapatos-de-tacón-alto-sobre-fondo-blanco-.jpg" width="450" height="280">
 
-  <p align="center" style="color: #1E90FF" ><b>Жіноче взуття</p></b>
+    <div class="row">
+      <div class="col-md-4 col-xs-11"><p align="center">Ця  сторінка розроблена з метою привернення вашої уваги до сучаного та стильного спортивного взуття. В ньому вам буде зручно відпочивати під час прогрулянки, подорожей. також ми можемо індивідуально підібрати кросівки для відвідування спортивного залу. Ми чекаємо на Вас!</p></div>
+      <div class="col-md-8 col-xs-12"><h1><p>Наша галерея</p></h1>
+        <div class="row">
+
+          <div class="col-md-6 col-xs-10" >
+            <div id="gallery" class="responsive" >
+
+              <a target="_blank" href="завантаження.jpg">
+                <img src="завантаження.jpg" alt="Cinque Terre" height="100%">
+              </a>
+              <div class="desc"><p>Чоловічі кросівки</p></div>
+
+          </div>
+          </div>
+          <div class="col-md-6 col-xs-10" >
+            <div id="gallery" class="responsive" >
+
+              <a target="_blank" href="images.jpg">
+                <img src="images.jpg" alt="Cinque Terre" height="100%">
+              </a>
+              <div class="desc"><p>Кросівки для спорту</p></div>
+
+            </div>
+          </div>
+
+          </div>
+        <div class="row">
+
+          <div class="col-md-6 col-xs-10" >
+            <div  id="gallery" class="responsive" >
+
+              <a target="_blank" href="images (2).jpg">
+                <img src="images (2).jpg" alt="Cinque Terre" height="100%">
+              </a>
+              <div class="desc"><p>Чоловічі кросівки</p></div>
+
+            </div>
+
+            </div>
+          <div class="col-md-6 col-xs-10" >
+            <div id="gallery" class="responsive" >
+
+              <a target="_blank" href="images (2).jpg">
+                <img src="images (2).jpg" alt="Cinque Terre" height="100%">
+              </a>
+              <div class="desc"><p>Кросівки для спорту</p></div>
+
+            </div>
+
+            </div>
+
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
 </div>
-<div id="div-2">
-<img src="0_20d21f6cc6cb9ea315910f863b4d865c.jpg" width="400" height="280">
-<p align="center" style="color: #1E90FF"><b> Чоловіче взуття</p></b></div>
-<div id="div-3">
-<img src="MAIN.jpg" width="450" height="280">
-  <p align="center" style="color: #1E90FF"><b> Дитяче взуття</p></b>
+
+<div id="grad1" class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-xs-4" > <p style="color: white">@ Футимська Сніжанна</p>
+        <img src="logo1.png"  width="350" height="200" align="center">
+      </div>
+      <div class="col-md-4 col-xs-4" ><p style="color: #b3d4fc">Знайдіть нас</p>
+        <a href="https://www.facebook.com/" target="_blank"><img src="Facebook_icon-icons.com_66933.png" height="51" width="51"></a>
+        <a href="https://www.instagram.com/?hl=uk" target="_blank"><img src="instagram.png" height="51" width="51">
+      </div>
+      <div class="col-md-4 col-xs-4" ><p style="color: white">Наші контакти: +0380951254577<br> email: sportUZsport@gmail.com<br>  </p> <img src="кросовок.png" width="130" height="75">  </div>
+  </div>
 </div>
-
-
-
-<!--<img src="logo1.png"  align="bottom	" width="300" height="175" > -->
-
-
-
-
-<!--<div class="box-crew">
-  <img src="e50c2fd9240488200acf8fc08ef5.jpg" width="150" height="80">
-  <span>- 20% скидка<br /> Декоративный френч</span>
-</div>-->
-
-<div id="div-4">
-<p>Знайдіть нас</p>
-<a href="https://www.facebook.com/" target="_blank"><img src="Facebook_icon-icons.com_66933.png" height="51" width="51"></a>
 </div>
-
+</div>
 </body>
 </html>
+
