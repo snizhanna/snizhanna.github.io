@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arimo');
+
 .top-menu {
   position: relative;
   background: #1E90FF;
@@ -26,9 +26,9 @@
   display: block;
   line-height: 80px;
   padding: 0 20px;
-  font-size: 18px;
+  font-size: 50%;
   letter-spacing: 2px;
-  font-family: 'Arimo', sans-serif;
+  font-family: 'Sansita', sans-serif;
   font-weight: bold;
   color: white;
   transition: .3s linear;
@@ -57,12 +57,15 @@
   }
 
 }
-@media (max-width: 630px) {
+@media (max-width: 630px) and (min-width: 201px){
   .menu-main li {display: block;}
+  .footer {position: relative;}
+  .p {font-size: 20% }
+
 }
-
-
-
+@media (max-width: 200px)
+  .menu-main li {display: block;}
+  .footer  {position: relative;}
 
 .box-crew{
   border:7px solid #1E90FF;
@@ -118,6 +121,8 @@ div.box-crew:hover span{
 
 div.box-crew:hover span{
   top:0;
+  -o-transition: all .3s easy; /*opera*/
+  -moz-transition: all .3s easy; /*mazila*/
 }
 
 .box-crew2{
@@ -126,6 +131,7 @@ div.box-crew:hover span{
   position:relative;
   width:171px;
   overflow:hidden;
+
 }
 
 .box-crew2 span{
@@ -147,8 +153,19 @@ div.box-crew:hover span{
 div.box-crew:hover span{
   top:0;
 }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .footer {
 
-.text
-{
+    left: 0; bottom: 0; /* Левый нижний угол */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+    border: 5px solid #b3d4fc;
+  }
 
-}
