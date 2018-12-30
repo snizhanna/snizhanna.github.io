@@ -9,7 +9,7 @@
   float: left;
   width: 40%;
   padding: 10px;
-  box-sizing: border-box;
+
 }
 .photo img {
   display: block;
@@ -22,7 +22,7 @@
   opacity: 0.5;
 }
 .photo a {
-  display: block;
+  display: none;
   position: relative;
 }
 .photo a:after {
@@ -59,7 +59,7 @@ body {
   color: #1E90FF;
 }
 #gallery {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   width: auto;
 }
 #gallery:after {

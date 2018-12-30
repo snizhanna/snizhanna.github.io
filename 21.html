@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гaл</title>
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="index2.html">
+  <link rel="stylesheet" href="vilhuk.html">
+  <link rel="stylesheet" href="style111.css">
+  <link rel="stylesheet" href="imgstyle.css">
+  <link href='https://fonts.google.com/specimen/Sansita?selection.family=Sansita' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-grid.css">
+  <link rel="stylesheet" href="bootstrap-reboot.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <style>
+    html,
+    body {
+      height: 100%;
+      color: #1E90FF;
+    }
+
+    #grad1 {
+
+      background-image: linear-gradient(to bottom right,#005cbf, #b3d4fc);
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .content {
+      flex: 1 0 auto;
+    }
+    .footer {
+      padding: 5px;
+      left: 0; bottom: 0; /
+    color: #fff; /* Цвет текста */
+      width: 100%;
+      border: 1px solid #b3d4fc;
+    }
+
+    p
+    {font-family: 'Sansita', sans-serif;
+      size: 15px;
+
+    }
+    . container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      border: 5px solid #b3d4fc ;
+    }
+
+
+    @media screen and (min-width: 300px) {
+      div {
+        font-size: 20px;
+        color: #005c;
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+
+      }
+    }
+
+
+    @media screen and (min-width: 600px)  {
+      div {
+        font-size: 55px;
+        color: #005cbf;
+      }
+      . photo {
+        width: 60%;
+        float: left;
+        margin-bottom: auto;
+      }
+
+    }
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    desc {
+      opacity: 1.0;
+    }
+    div.desc:hover {
+      padding: 0;
+      text-align: center;
+      opacity: 0.5;
+    }
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    img:hover {
+      opacity: 0.5;
+      filter: alpha(opacity=100);
+    }
+    div.desc {
+      padding: 5px;
+      text-align: center;
+    }
+    img {
+      opacity: 1.0;
+      filter: alpha(opacity=50);
+      alignment: center;
+    }
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+    . row{
+      width: 100%;
+    }
+
+
+    @media only screen and (max-width: 760px) {
+    {
+      width: 49.99999%;
+      margin: 6px 0;
+
+    }
+    }
+
+    @media only screen and (max-width: 400px) {
+    {
+      width: 100%;
+    }
+    }
+    /* слой затемнения */
+    . dm-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.65);
+      display: none;
+      overflow: auto;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+    }
+    /* активируем слой затемнения и модальное окно */
+    . dm-overlay:target {
+      display: block;
+      /* анимация и время задержки */
+      -webkit-animation: fade .6s;
+      -moz-animation: fade .6s;
+      animation: fade .6s;
+    }
+    /* блочная таблица */
+    . dm-table {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+    /* ячейка блочной таблицы */
+    . dm-cell {
+      display: table-cell;
+      padding: 0 1em;
+      vertical-align: middle;
+      text-align: center;
+    }
+    /* модальный блок */
+    . dm-modal {
+      display: inline-block;
+      padding: 20px;
+      /* максимально возможная ширина */
+      max-width: 100em;
+      background: #607d8b;
+      /* внешняя тень блока */
+      -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+      color: #cfd8dc;
+      text-align: left;
+      /* анимация и время задержки */
+      -webkit-animation: fade .8s;
+      -moz-animation: fade .8s;
+      animation: fade .8s;
+    }
+    .close{
+
+    }
+    /* анимация при появлении затемнения и блоков с содержанием */
+    @-moz-keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1 }
+    }
+    @-webkit-keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1 }
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1 }
+    }
+    . navbar navbar-inverse{
+      background: #007bff;
+    }
+    . button{
+      background: #007bff;
+    }
+    * Базовые стили слоя затемнения и модального окна  */
+    .overlay {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      display: none;
+      /* фон затемнения */
+      background-color: rgba(0, 0, 0, 0.65);
+      position: fixed; /* фиксированное поцизионирование */
+      cursor: default; /* тип курсара */
+    }
+    /* активируем слой затемнения */
+    .overlay:target {
+      display: block;
+    }
+    /* стили модального окна */
+    .popup {
+      top: -100%;
+      right: 0;
+      left: 50%;
+      font-size: 14px;
+      z-index: 20;
+      margin: 0;
+      width: 85%;
+      min-width: 320px;
+      max-width: 600px;
+      /* фиксированное позиционирование, окно стабильно при прокрутке */
+      position: fixed;
+      padding: 15px;
+      border: 1px solid #383838;
+      background: #fefefe;
+      /* скругление углов */
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      font: 14px/18px 'Tahoma', Arial, sans-serif;
+      /* внешняя тень */
+      -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+      -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+      -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+      box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+      -webkit-transform: translate(-50%, -500%);
+      -ms-transform: translate(-50%, -500%);
+      -o-transform: translate(-50%, -500%);
+      transform: translate(-50%, -500%);
+      -webkit-transition: -webkit-transform 0.6s ease-out;
+      -moz-transition: -moz-transform 0.6s ease-out;
+      -o-transition: -o-transform 0.6s ease-out;
+      transition: transform 0.6s ease-out;
+    }
+    /* активируем модальный блок */
+    .overlay:target+.popup {
+      -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      top: 20%;
+    }
+    /* формируем кнопку закрытия */
+    .close {
+      top: -10px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      padding: 0;
+      border: 2px solid #ccc;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+      border-radius: 15px;
+      background-color: rgba(61, 61, 61, 0.8);
+      -webkit-box-shadow: 0px 0px 10px #000;
+      -moz-box-shadow: 0px 0px 10px #000;
+      box-shadow: 0px 0px 10px #000;
+      text-align: center;
+      text-decoration: none;
+      font: 13px/20px 'Tahoma', Arial, sans-serif;
+      font-weight: bold;
+      -webkit-transition: all ease .8s;
+      -moz-transition: all ease .8s;
+      -ms-transition: all ease .8s;
+      -o-transition: all ease .8s;
+      transition: all ease .8s;
+    }
+    .close:before {
+      color: rgba(255, 255, 255, 0.9);
+      content: "X";
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+      font-size: 12px;
+    }
+    .close:hover {
+      background-color: rgba(252, 20, 0, 0.8);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+    /* изображения внутри окна */
+    .popup img {
+      width: 100%;
+      height: auto;
+    }
+    /* миниатюры слева/справа */
+    . pic-left,
+    . pic-right {
+      width: 25%;
+      height: auto;
+    }
+    .pic-left {
+      float: left;
+      margin: 5px 15px 5px 0;
+    }
+    .pic-right {
+      float: right;
+      margin: 5px 0 5px 15px;
+    }
+    /* элементы м-медиа, фреймы */
+    .popup embed,
+    .popup iframe {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display:block;
+      margin: auto;
+      min-width: 320px;
+      max-width: 600px;
+      width: 100%;
+    }
+    .popup h2 { /* заголовок 2 */
+      margin: 0;
+      color: #008000;
+      padding: 5px 0px 10px;
+      text-align: left;
+      text-shadow: 1px 1px 3px #adadad;
+      font-weight: 500;
+      font-size: 1.4em;
+      font-family: 'Tahoma', Arial, sans-serif;
+      line-height: 1.3;
+    }
+    /* параграфы */
+    .popup p {margin: 0; padding: 5px 0}
+  </style>
+
+</head>
+<body background="fon.png">
+<div>
+  <div class="wrapper">
+
+    <header>
+      <img src="кросовок.png"  align="left" width="130" height="75">
+      <div align="center"><img src="logo1.png"  width="250" height="100" align="center"></div>
+
+      <nav  class="top-menu">
+        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-menu">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>-->
+        <ul class="menu-main">
+          <li class="left-item"><a  href="index.html">Головна</a></li>
+          <li class="left-item"><a href="katalog.html">Каталог</a></li>
+          <li class="left-item"><a href="vilhuk.html">Відгуки</a></li>
+          <!--<a href="javascript:void(0)" class="top-menu button left-item right-item hide-large hide-medium" onclick="myFunction()">&#9776;</a>-->
+
+          <!--</div>Контакти</a></li>-->
+          <li class="right-item"><a href="">Корзина</a></li>
+          <li class="right-item"><a href="spysokfoto.html">Аксесуари</a></li>
+          <li class="right-item"><a href="">  <div> <form class="navbar-form navbar-left" action="/action_page.php" align="left">
+            <div class="input-group">  <li class="input-group-btn">
+          <input type="text" class="form-control" placeholder="Search" name="search"></li>
+          <li class="right-item"><a href="#"><span class="glyphicon glyphicon-log-in" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"></span>  </a></li>
+          <li class="right-item"><a href="#"><span class="glyphicon glyphicon-user"onclick="document.getElementById('id01').style.display='block'" style="width:auto;"></span> </a></li>
+
+          <!-- <button class="btn btn-default" type="submit"></button>-->
+  </div>
+</div>
+</ul>
+
+<a class="navbar-logo" href=""><img src="кросовок.png" width="130" height="75"></a>
+</nav>
+
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+</script>
+
+
+</header>
+
+</div>
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-xs-11">
+
+        <div id="gallery" class="responsive" >
+
+          <a target="_blank" href="завантаження.jpg">
+            <img src="завантаження.jpg" alt="Cinque Terre" style="100%">
+          </a>
+          <div class="desc"><p>Чоловічі кросівки</p></div>
+
+
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xs-12" >
+        <p>Ця  сторінка розроблена з метою привернення вашої уваги до сучаного та стильного спортивного взуття. В ньому вам буде зручно відпочивати під час прогрулянки, подоро</p></div>
+      <div class="container">
+
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" aligne="left" style="height: 40px; width: 150px " >Придбати</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+
+          <div class="modal-dialog">
+            <img src="завантаження.jpg" alt="Cinque Terre" style="100%">
+            <!-- Modal content-->
+            <div class="modal-content">
+
+              <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                <p>Some text in the modal.</p>
+
+                <!-- <img src="завантаження.jpg" alt="Cinque Terre" style="100%">-->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" aligne="rihgt" style="height: 40px; width: 150px " >Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- <div class="row">
+         <div class="col-md-2 col-xs-12" >
+
+         </div>-->
+
+      <div class="col-md-4 col-xs-12" >
+        <div class="container">
+
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" aligne="left" style="height: 40px; width: 150px " >Придбати</button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+
+            <div class="modal-dialog">
+              <img src="завантаження.jpg" alt="Cinque Terre" style="100%">
+              <!-- Modal content-->
+              <div class="modal-content">
+
+                <div class="modal-header">
+
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Some text in the modal.</p>
+
+                  <!-- <img src="завантаження.jpg" alt="Cinque Terre" style="100%">-->
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal" aligne="rihgt" style="height: 40px; width: 150px " >Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<div id="grad1" class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-xs-4" >
+        <a  href="index.html"><p style="color: white">Головна</p></a>
+        <a href="katalog.html"><p style="color: white">Каталог</p></a>
+        <a href="vilhuk.html"><p style="color: white">Відгуки</p></a>
+        <a href="spysokfoto.html"><p style="color: white">Аксесуари</p></a>
+
+        <img src="logo1.png"  width="350" height="200" align="center">
+
+        <p style="color: white">@ Футимська Сніжанна</p>
+
+      </div>
+      <div class="col-md-4 col-xs-4" ><p style="color: #b3d4fc">Знайдіть нас</p>
+        <a href="https://www.facebook.com/" target="_blank"><img src="Facebook_icon-icons.com_66933.png" height="51" width="51"></a>
+        <a href="https://www.instagram.com/?hl=uk" target="_blank"><img src="instagram.png" height="51" width="51">
+      </div>
+      <div class="col-md-4 col-xs-4" ><p style="color: white">Наші контакти: +0380951254577<br> email: sportUZsport@gmail.com<br>  </p> <img src="кросовок.png" width="130" height="75">  </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+</script>
+
+
+</body>
+</html>
+

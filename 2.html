@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гaл</title>
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="index2.html">
+  <link rel="stylesheet" href="vilhuk.html">
+  <link rel="stylesheet" href="style111.css">
+  <link rel="stylesheet" href="imgstyle.css">
+  <link rel="stylesheet" href=tovarStyle.css>
+  <link href='https://fonts.google.com/specimen/Sansita?selection.family=Sansita' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-grid.css">
+  <link rel="stylesheet" href="bootstrap-reboot.css">
+  <link rel="stylesheet" href="myScript.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <style>
+    html,
+    body {
+      height: 100%;
+      color: #1E90FF;
+    }
+
+    #grad1 {
+
+      background-image: linear-gradient(to bottom right,#005cbf, #b3d4fc);
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .content {
+      flex: 1 0 auto;
+    }
+    .footer {
+      padding: 5px;
+      left: 0; bottom: 0; /
+    color: #fff; /* Цвет текста */
+      width: 100%;
+      border: 1px solid #b3d4fc;
+    }
+    . modal fade{
+      background: #1E90FF;
+      height: 50%;
+
+    }
+
+    modal-content{
+      height: 70%;
+
+    }
+
+
+    @media screen and (min-width: 300px) {
+      div {
+        font-size: 20px;
+        color: #005c;
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+
+      }
+    }
+    /* анимация при появлении затемнения и блоков с содержанием */
+    @-moz-keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1 }
+    }
+    @-webkit-keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1 }
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1 }
+    }
+
+    @media screen and (min-width: 600px)  {
+      div {
+        font-size: 55px;
+        color: #005cbf;
+      }
+      . photo {
+        width: 60%;
+        float: left;
+        margin-bottom: auto;
+      }
+
+      @media only screen and (max-width: 760px) {
+      {
+        width: 49.99999%;
+        margin: 6px 0;
+
+      }
+      }
+
+      @media only screen and (max-width: 400px) {
+      {
+        width: 100%;
+      }
+      }
+    }
+    /* The container */
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* Hide the browser's default radio button */
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    /* Create a custom radio button */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+
+    /* When the radio button is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+      background-color: #2196F3;
+    }
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    /* Show the indicator (dot/circle) when checked */
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    /* Style the indicator (dot/circle) */
+    .container .checkmark:after {
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+    }
+  </style>
+
+</head>
+<body background="fon.png">
+<div>
+  <div class="wrapper">
+
+    <header>
+      <img src="кросовок.png"  align="left" width="130" height="75">
+      <div align="center"><img src="logo1.png"  width="250" height="100" align="center"></div>
+
+
+
+      <nav  class="top-menu" >
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <ul class="menu-main">
+          <li class="left-item"><a  href="index.html">Головна</a></li>
+          <li class="left-item"><a href="katalog.html">Каталог</a></li>
+          <li class="left-item"><a href="vilhuk.html">Відгуки</a></li>
+          <!--<a href="javascript:void(0)" class="top-menu button left-item right-item hide-large hide-medium" onclick="myFunction()">&#9776;</a>-->
+
+          <!--</div>Контакти</a></li>-->
+          <!-- <li class="right-item"><a href="">Корзина</a></li>
+          <li class="right-item"><a href="spysokfoto.html">Аксесуари</a></li>-->
+          <li class="right-item"><a href="">  <div> <form class="navbar-form navbar-left" action="/action_page.php" align="left">
+            <div class="input-group">  <li class="input-group-btn">
+          <input type="text" class="form-control" placeholder="Search" name="search"></li>
+          <li class="right-item"><a href="#"><span class="glyphicon glyphicon-log-in" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"></span>  </a></li>
+          <li class="right-item"><a href="#"><span class="glyphicon glyphicon-user" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"></span> </a></li>
+
+          <!-- <button class="btn btn-default" type="submit"></button>-->
+  </div>
+</div>
+</ul>
+
+<a class="navbar-logo" href=""><img src="кросовок.png" width="130" height="75"></a>
+</nav>
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+</script>
+
+
+</header>
+
+<div class="content">
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-md-3 col-xs-11">
+
+        <div id="gallery" class="responsive" >
+
+          <a target="_blank" href="a4dfd69d07f4d598d63872703cfc.jpg">
+            <img src="a4dfd69d07f4d598d63872703cfc.jpg" alt="Cinque Terre" height="300px" width="450px">
+          </a>
+
+
+
+        </div>
+      </div>
+
+      <div class="col-md-3 col-xs-12" >
+        <p>    Дитячі кросівки серії New Balance. Дуже зручні та стильні, виконані із високоякісних еклогічночистих матеріалів, призанчених саме для дітей. Розмірнмй ряд: від 25-30 розміри.</p></div>
+
+
+
+      <div class="col-md-3 col-xs-12" >
+
+        <p>Оберіть розмір</p>
+        <label class="container"><p>25</p>
+          <input type="radio" checked="checked" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"><p>26</p>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"><p>27</p>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"><p>28</p>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal" aligne="center" style="height: 40px; width: 150px " >Придбати</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog" style="background-color: #1289aa">
+
+          <div class="modal-dialog">
+            <img src="a4dfd69d07f4d598d63872703cfc.jpg" alt="Cinque Terre" height="300px" width="450px">
+            <!-- Modal content-->
+            <div class="modal-content">
+
+              <div class="modal-header">
+
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                <h4 class="modal-title">Дитячі кросівки серії New Balance.</h4>
+              </div>
+              <div class="modal-body">
+                <p>Ви  зробили правильний вибір</p>
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="myFunction()" data-dismiss="modal" aligne="rihgt" style="height: 40px; width: 150px " >Придбати</button>
+
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+<div id="grad1" class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-xs-4" >
+        <a  href="index.html"><p style="color: white">Головна</p></a>
+        <a href="katalog.html"><p style="color: white">Каталог</p></a>
+        <a href="vilhuk.html"><p style="color: white">Відгуки</p></a>
+
+
+
+
+        <p style="color: white">@ Футимська Сніжанна</p>
+
+      </div>
+      <div class="col-md-4 col-xs-4" ><p style="color: #b3d4fc">Знайдіть нас</p>
+        <a href="https://www.facebook.com/" target="_blank"><img src="Facebook_icon-icons.com_66933.png" height="51" width="51"></a>
+        <a href="https://www.instagram.com/?hl=uk" target="_blank"><img src="instagram.png" height="51" width="51">
+          <img src="logo1.png"  width="250" height="100" align="center">
+      </div>
+      <div class="col-md-4 col-xs-4" ><p style="color: white">Наші контакти: +0380951254577<br> email: sportUZsport@gmail.com<br>  </p> <img src="кросовок.png" width="130" height="75">  </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<script>
+  function myFunction() {
+    alert("Дякуємо за  покупку!");
+  }
+</script>
+</body>
+</html>
+

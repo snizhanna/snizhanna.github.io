@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гaл</title>
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="index2.html">
+  <link rel="stylesheet" href="vilhuk.html">
+  <link rel="stylesheet" href="style111.css">
+  <link rel="stylesheet" href="imgstyle.css">
+  <link rel="stylesheet" href="newStyle.css">
+  <link href='https://fonts.google.com/specimen/Sansita?selection.family=Sansita' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-grid.css">
+  <link rel="stylesheet" href="bootstrap-reboot.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <style>
+    html,
+    body {
+      height: 100%;
+      color: #1E90FF;
+    }
+
+  </style>
+
+</head>
+<body background="fon.png">
+<div>
+  <div class="wrapper">
+
+    <header>
+      <img src="кросовок.png"  align="left" width="130" height="75">
+      <div align="center"><img src="logo1.png"  width="250" height="100" align="center"></div>
+
+      <div id="id01" class="modal">
+        <img src="кросовок.png"  align="left" width="130" height="75">
+        <div align="center"><img src="logo1.png"  width="250" height="100" align="center"></div>
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Реєстрація</h1>
+            <hr>
+            <label for="email"><b><p>Електрона адреса</p></b></label>
+            <input type="text"  name="email" required>
+
+            <label for="psw"><b><p>Пароль</p></b></label>
+            <input type="password"  name="psw" required>
+
+            <label for="psw-repeat"><b><p>Повторіть пароль</p></b></label>
+            <input type="password"  name="psw-repeat" required>
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Запам'ятати мене
+            </label>
+
+
+
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><p>Відміна</p></button>
+              <button type="submit" class="signupbtn"><p>Реєстрація</p></button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+  </div>
+
+
+  <div id="id02" class="modal2">
+    <img src="кросовок.png"  align="left" width="130" height="75">
+    <div align="center"><img src="logo1.png"  width="250" height="100" align="center"></div>
+
+    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal1">&times;</span>
+    <form class="modal1-content animate" action="/action_page.php">
+      <!--<div class="imgcontainer">
+
+
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>-->
+
+      <div class="container">
+        <label for="uname"><b><p>Ім'я</p></b></label>
+        <input type="text" placeholder="Ім'я" name="Логін" required>
+
+        <label for="psw"><b><p>Пароль</p></b></label>
+        <input type="password" placeholder="Введіть пароль" name="Пароль" required>
+
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember"><p>Запам'ятати мене</p>
+        </label>
+        <span class="psw">Забули <a href="#">пароль?</a></span>
+      </div>
+
+      <div class="container">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn"><p>Відміна</p></button>
+        <button type="submit"><p>Увійти</p></button>
+
+      </div>
+    </form>
+  </div>
+
+
+  <nav  class="top-menu">
+    <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-menu">
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>-->
+    <ul class="menu-main">
+      <li class="left-item"><a  href="index.html">Головна</a></li>
+      <li class="left-item"><a href="katalog.html">Каталог</a></li>
+      <li class="left-item"><a href="vilhuk.html">Відгуки</a></li>
+      <!--<a href="javascript:void(0)" class="top-menu button left-item right-item hide-large hide-medium" onclick="myFunction()">&#9776;</a>-->
+
+      <!--</div>Контакти</a></li>
+      <li class="right-item"><a href="">Корзина</a></li>
+                <li class="right-item"><a href="spysokfoto.html">Аксесуари</a></li>-->
+      <li class="right-item"><a href="">  <div> <form class="navbar-form navbar-left" action="/action_page.php" align="left">
+        <div class="input-group">  <li class="input-group-btn">
+      <input type="text" class="form-control" placeholder="Search" name="search"></li>
+      <li class="right-item"><a href="#"><span class="glyphicon glyphicon-log-in" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><img  src="вхід.png" title="Вхід"></span></a></li>
+      <li class="right-item"><a href="#"><span class="glyphicon glyphicon-user" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img  src="логін.png" title="Реєстрація"></span> </a></li>
+
+      <!-- <button class="btn btn-default" type="submit"></button>-->
+</div>
+</div>
+</ul>
+
+<a class="navbar-logo" href=""><img src="кросовок.png" width="130" height="75"></a>
+</nav>
+
+</header>
+
+</div>
+</div>
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+
+
+      <h1> <p id="demo">Залиште свої коментарі</p></h1>
+
+      <div class="box1">
+        <textarea id="text1" rows="10" cols="50">  </textarea>
+      </div>
+
+
+      <form name="myForm">
+
+        <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Розмір шрифта</button>
+
+        <button type="button" onclick="document.getElementById('demo').style.color='red'">Колір</button>
+
+        <button type="button" onclick="addOption()">Додати коментар</button>
+        <!--<button type="button" onclick="myFunction()">Add</button>-->
+
+        <br>
+
+        <!--<select name="language" size=10 style="color: #007bff">!-->
+
+
+        </select>
+
+      </form>
+      <script>
+        //addButton = document.myForm.;
+        //languagesSelect = document.myForm.language;
+        text1_1 = document.getElementById("text1");
+        text2_1 = document.getElementById("text2");
+
+
+        // обработчик добавления элемента
+        function addOption(){
+          //i = languagesSelect.options.length + 1;
+          //if (i<=100){languagesSelect.options.add(new Option("Елемент-"+i));}
+          //if (i<=100){languagesSelect.options.add(new Option(text1_1.value));}
+
+
+          if ((text1_1.value!=null)&&(text1_1.value.length!=0)) {
+
+            var x = document.createElement("TEXTAREA");
+            var t = document.createTextNode(text1_1.value);
+            x.appendChild(t);
+            document.body.appendChild(x);
+            text1_1.value="";
+
+          }
+
+          //el_text.value += text1_1.value+"\n";
+
+        }
+
+        addButton.addEventListener("click", addOption);
+
+
+      </script>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+</div>
+</div>
+<div id="grad1" class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-xs-4" >
+        <a  href="index.html"><p style="color: white">Головна</p></a>
+        <a href="katalog.html"><p style="color: white">Каталог</p></a>
+        <a href="vilhuk.html"><p style="color: white">Відгуки</p></a>
+
+
+
+        <p style="color: white">@ Футимська Сніжанна</p>
+
+      </div>
+      <div class="col-md-4 col-xs-4" ><p style="color: #b3d4fc">Знайдіть нас</p>
+        <a href="https://www.facebook.com/" target="_blank"><img src="Facebook_icon-icons.com_66933.png" height="51" width="51"></a>
+        <a href="https://www.instagram.com/?hl=uk" target="_blank"><img src="instagram.png" height="51" width="51">
+          <img src="logo1.png"  width="250" height="100" align="center">
+      </div>
+      <div class="col-md-4 col-xs-4" ><p style="color: white">Наші контакти: +0380951254577<br> email: sportUZsport@gmail.com<br>  </p> <img src="кросовок.png" width="130" height="75">  </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+</script>
+
+
+</body>
+</html>
+

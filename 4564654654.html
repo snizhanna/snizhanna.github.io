@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    /* слой затемнения */
+  . dm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  /* активируем слой затемнения и модальное окно */
+  . dm-overlay:target {
+    display: block;
+    /* анимация и время задержки */
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+  }
+  /* блочная таблица */
+  . dm-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  /* ячейка блочной таблицы */
+  . dm-cell {
+    display: table-cell;
+    padding: 0 1em;
+    vertical-align: middle;
+    text-align: center;
+  }
+  /* модальный блок */
+  . dm-modal {
+    display: inline-block;
+    padding: 20px;
+    /* максимально возможная ширина */
+    max-width: 100em;
+    background: #607d8b;
+    /* внешняя тень блока */
+    -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    color: #cfd8dc;
+    text-align: left;
+    /* анимация и время задержки */
+    -webkit-animation: fade .8s;
+    -moz-animation: fade .8s;
+    animation: fade .8s;
+  }
+  .close{
+
+  }
+  /* анимация при появлении затемнения и блоков с содержанием */
+  @-moz-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+  }
+  @-webkit-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+  }
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+  }
+    . navbar navbar-inverse{
+      background: #007bff;
+    }
+   . button{
+     background: #007bff;
+   }
+    * Базовые стили слоя затемнения и модального окна  */
+    .overlay {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      display: none;
+      /* фон затемнения */
+      background-color: rgba(0, 0, 0, 0.65);
+      position: fixed; /* фиксированное поцизионирование */
+      cursor: default; /* тип курсара */
+    }
+    /* активируем слой затемнения */
+    .overlay:target {
+      display: block;
+    }
+    /* стили модального окна */
+    .popup {
+      top: -100%;
+      right: 0;
+      left: 50%;
+      font-size: 14px;
+      z-index: 20;
+      margin: 0;
+      width: 85%;
+      min-width: 320px;
+      max-width: 600px;
+      /* фиксированное позиционирование, окно стабильно при прокрутке */
+      position: fixed;
+      padding: 15px;
+      border: 1px solid #383838;
+      background: #fefefe;
+      /* скругление углов */
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      font: 14px/18px 'Tahoma', Arial, sans-serif;
+      /* внешняя тень */
+      -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+      -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+      -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+      box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+      -webkit-transform: translate(-50%, -500%);
+      -ms-transform: translate(-50%, -500%);
+      -o-transform: translate(-50%, -500%);
+      transform: translate(-50%, -500%);
+      -webkit-transition: -webkit-transform 0.6s ease-out;
+      -moz-transition: -moz-transform 0.6s ease-out;
+      -o-transition: -o-transform 0.6s ease-out;
+      transition: transform 0.6s ease-out;
+    }
+    /* активируем модальный блок */
+    .overlay:target+.popup {
+      -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      top: 20%;
+    }
+    /* формируем кнопку закрытия */
+    .close {
+      top: -10px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      padding: 0;
+      border: 2px solid #ccc;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+      border-radius: 15px;
+      background-color: rgba(61, 61, 61, 0.8);
+      -webkit-box-shadow: 0px 0px 10px #000;
+      -moz-box-shadow: 0px 0px 10px #000;
+      box-shadow: 0px 0px 10px #000;
+      text-align: center;
+      text-decoration: none;
+      font: 13px/20px 'Tahoma', Arial, sans-serif;
+      font-weight: bold;
+      -webkit-transition: all ease .8s;
+      -moz-transition: all ease .8s;
+      -ms-transition: all ease .8s;
+      -o-transition: all ease .8s;
+      transition: all ease .8s;
+    }
+    .close:before {
+      color: rgba(255, 255, 255, 0.9);
+      content: "X";
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+      font-size: 12px;
+    }
+    .close:hover {
+      background-color: rgba(252, 20, 0, 0.8);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+    /* изображения внутри окна */
+    .popup img {
+      width: 100%;
+      height: auto;
+    }
+    /* миниатюры слева/справа */
+    .pic-left,
+    .pic-right {
+      width: 25%;
+      height: auto;
+    }
+    .pic-left {
+      float: left;
+      margin: 5px 15px 5px 0;
+    }
+    .pic-right {
+      float: right;
+      margin: 5px 0 5px 15px;
+    }
+    /* элементы м-медиа, фреймы */
+    .popup embed,
+    .popup iframe {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display:block;
+      margin: auto;
+      min-width: 320px;
+      max-width: 600px;
+      width: 100%;
+    }
+    .popup h2 { /* заголовок 2 */
+      margin: 0;
+      color: #008000;
+      padding: 5px 0px 10px;
+      text-align: left;
+      text-shadow: 1px 1px 3px #adadad;
+      font-weight: 500;
+      font-size: 1.4em;
+      font-family: 'Tahoma', Arial, sans-serif;
+      line-height: 1.3;
+    }
+    /* параграфы */
+    .popup p {margin: 0; padding: 5px 0}
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+
+    /* Button used to open the contact form - fixed at the bottom of the page */
+    .open-button {
+      background-color: #555;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 280px;
+    }
+
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+
+    /* Full-width input fields */
+    .form-container input[type=text], .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse" style="color: #007bff">
+  <div class="container-fluid">
+    <div class="navbar-header" style="color: #007bff">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--<a href="#win1" class="btn"> <img src="a831bc69b016f94b41e1f948ef4f.jpg"></a>
+<div class="dm-overlay" id="win1">
+  <div class="dm-table">
+    <div class="dm-cell">
+      <div class="dm-modal">
+        <h3>Заголовок модального окна</h3>
+        <div class="row">
+       <!-- <div class="pl-left">
+          <div class="md-4">
+          <img src="a831bc69b016f94b41e1f948ef4f.jpg" style="width: 25%"></div> <div class="md-8"><p>ТЦя  сторінка розроблена з метою привернення вашої уваги до сучаного та стильного спортивного взуття. В ньому вам буде зручно відпочивати під час прогрулянки, подорЦя  сторінка розроблена з метою привернення вашої уваги до сучаного та стильного спортивного взуття. В ньому вам буде зручно відпочивати під час прогрулянки, подоро
+
+        </p></div>
+        </div>
+          <a href="#close" class="close" align="right">X</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>-->
+<button class="open-button" onclick="openForm()">Open Form</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<a href="#win2" class="button"><button class="btn">Открыть окно 2</button></a>
+
+<a href="#win3" class="button"><button class="btn">Открыть окно 12</button></a>
+
+<!--Модальное окно №2
+<a href="#x" class="overlay" id="win2"></a>
+<div class="popup">
+
+
+  <!--<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
+    <form class="modal-content" action="/action_page.php">
+      <div class="container">
+        <h1>Реєстрація</h1>
+        <hr>
+        <label for="email"><b>Електрона адреса</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="psw"><b>Пароль</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label for="psw-repeat"><b>Повторіть пароль</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Реєстрація</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  Здесь вы можете разместить любое содержание, текст с картинками или видео!
+  <a class="close" title="Закрыть" href="#close"></a>-->
+
+<!--Модальное окно №2-->
+<a href="#x" class="overlay" id="win2"></a>
+<div class="popup">
+  <img src="a831bc69b016f94b41e1f948ef4f.jpg" style="width:25%">
+  <div> Код являє собою витримку з сценарію, використовуваного для запуску розширення ModalPopup на клієнті. Зауважте, що розширення AJAX для ASP.NET зазвичай складається з серверного елемента управління, розширення і класу поведінки клієнта, написаного на JavaScript. Код на рис. 1 – з класу поведінки клієнта розширення ModalPopup. Якщо ви завантажили вихідний код набору AJAX Control Toolkit зі сторінки codeplex.com / atlascontroltoolkit, вищевказаний код можна знайти у файлі modalpopupbehavior.js.
+    Як видно з рис. 1, кореневий елемент дерева розмітки вікна позначений як елемент переднього плану і програмним шляхом прихований з уваги. У той же час тег DIV створюється динамічно і призначається в якості фонового елемента. Йому дається фіксоване положення з координатами 0,0 і призначається соотвествующий стиль. Тегу DIV також присвоюється гранично високий (але довільний) індекс по осі z, який забезпечує його положення над усіма елементами документа, так як властивість індексу по осі z встановлює порядок елемента HTML в стеку, і елемент вище по поряду завжди відображається вище елементів з меншим порядком.
+    Потім DIV додається до моделі DOM (об'єктній моделі документів) як дочірній для елемента переднього плану. Нарешті, елемент переднього плану – вміст діалогового вікна – отримує індекс по осі z трохи вище фону.
+
+  Здесь вы можете разместить любое содержание, текст с картинками или видео!
+  <a class="close" title="Закрыть" href="#close">Pjjjj</a>
+  <a href="#close" id="stop" title="Закрыть" class="close"></a>
+
+</div>
+  <!--<div class="w3-container">-->
+
+
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+
+
+ <!--<a> <img src="a831bc69b016f94b41e1f948ef4f.jpg" style="width:100%;cursor:zoom-in"
+       onclick="document.getElementById('modal01').style.display='block'"></a>
+
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&timesCLose</span>
+    <div class="w3-modal-content w3-animate-zoom">
+      <img src="a831bc69b016f94b41e1f948ef4f.jpg" style="width:100%">
+      <div> Код являє собою витримку з сценарію, використовуваного для запуску розширення ModalPopup на клієнтіі modalpopupbehavior.js.
+
+      </div>
+    </div>
+  </div>
+</div>
+  <button class="btn"> <i>jkhjh</i></button>
+
+  <div class="container1">
+
+    <!-- Trigger the modal with a button
+    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Придбати</button>
+    <div class="w3-container w3-blue">
+      <h2>Input Form</h2>
+    </div>-->
+
+
+    <!-- Modal
+    <div class="modal fade" id="myModal" role="dialog">
+     <form class="w3-container">
+      <p>
+        <label>First Name</label>
+        <input class="w3-input" type="text"></p>
+      <p>
+        <label>Last Name</label>
+        <input class="w3-input" type="text"></p>
+      <p>
+        <label>Email</label>
+        <input class="w3-input" type="text"></p>
+    </form>
+  </div>-->
+
+
+</body>
+</html>

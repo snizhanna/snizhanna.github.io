@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>#bg_popup{
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#popup {
+  background: #fff;
+  width: 520px;
+  margin: 25% auto;
+  padding: 5px 20px 13px 20px;
+  border: 2px solid #1BA600;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 20px #000;
+  -moz-box-shadow: 0px 0px 20px #000;
+  box-shadow: 0px 0px 20px #000;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.close{
+  display:block;
+  position:absolute;
+  top:-12px;
+  right:5px;
+  width:25px;
+  height:25px;
+  line-height:28px;
+  color:#fff;
+  background:#1BA600;
+  cursor:pointer;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+  background-color:#f30;
+}
+</style>
+
+</head>
+<body>
+<div id="bg_popup">
+  <div id="popup">
+    <h1>Заголовок</h1>
+    <p>Пример модального окна, всплывающего при загрузке сайта.</p>
+    <a class="close" href="#" title="Закрыть" onclick="document.getElementById('bg_popup').style.display='none'; return false;">X</a>
+  </div>
+</div>
+
+</body>
+</html>

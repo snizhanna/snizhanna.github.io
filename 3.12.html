@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="index.html">
+  <link rel="stylesheet" href="katalog.html">
+  <link rel="stylesheet" href="proba.js">
+  <link rel="stylesheet" href="vilhuk.html">
+  <link href='https://fonts.google.com/specimen/Sansita?selection.family=Sansita' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-grid.css">
+  <link rel="stylesheet" href="bootstrap-reboot.css">
+  <link rel="stylesheet" href="myScript.js">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+</head>
+<body>
+<button type="button" onclick="createElement()">Додати до списку</button>
+<p id="demo"></p>
+<script>
+var document.createElement("тег");
+
+var div = document.createElement("div.id = \"my-div\";");
+
+function addElement()
+{for (i = 0; i < 100; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+  var picHolder = document.getElementById("picHolder");
+  var img = document.createElement("img");
+  img.src = "https://picsum.photos/290/290/?2";
+  picHolder.appendChild(img);
+}
+
+</script>
+
+
+
+<p id="demo1"></p>
+
+<script>
+
+
+  var  text, i;
+
+  function myFunction() {
+    fruits.push("Kiwi");
+    document.getElementById("demo1").innerHTML = fruits;
+  }
+
+  text = "<ul>";
+  for (i = 0; i < 100; i++) {
+    text += "<li>" + img.src = "https://picsum.photos/290/290/?2"; + "</li>";
+  }
+  text += "</ul>";
+
+  document.getElementById("demo").innerHTML = text;
+</script>
+
+
+
+
+<div class="test">
+  <div class="round"><img src="twenty-twenty-150x150.jpg" alt="Image" id="img"></div>
+</div>
+<script>
+  //var pics = ["FitText-150x150.jpg", "jQuery-Knob-150x150.jpg", "unislider-150x150.jpg"];
+  var img = document.getElementById("img"), i = 0;
+
+  img.addEventListener("click", addImg);
+  function addImg(){
+    i<pics.100 ? i++ : i=0;
+    img.src = pics['https://picsum.photos/290/290/?i'];
+  }
+</script>
+
+
+
+<div class="test">
+  <div class="round"><img src="twenty-twenty-150x150.jpg" alt="Image" id="img"></div>
+</div>
+<script>
+  var pics = ["FitText-150x150.jpg", "jQuery-Knob-150x150.jpg", "unislider-150x150.jpg"];
+  var img = document.getElementById("img"), num = 0;
+
+  img.addEventListener("click", changeImg);
+  function changeImg(){
+    num<pics.length-1 ? num++ : num=0;
+    img.src = pics[num];
+  }
+</script>
+
+
+
+
+</body>
+</html>

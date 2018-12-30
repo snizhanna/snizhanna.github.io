@@ -1,112 +1,394 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гaл</title>
   <link rel="stylesheet" href="menu.css">
-  <link rel="stylesheet" href="index.html">
+  <link rel="stylesheet" href="index2.html">
   <link rel="stylesheet" href="vilhuk.html">
-    <title>Каталог</title>
-<style>
-  #grad1 {
+  <link rel="stylesheet" href="style111.css">
+  <link rel="stylesheet" href="imgstyle.css">
+  <link rel="stylesheet" href="newStyle.css">
+  <link href='https://fonts.google.com/specimen/Sansita?selection.family=Sansita' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-grid.css">
+  <link rel="stylesheet" href="bootstrap-reboot.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
-    background-image: linear-gradient(to bottom right,blue, deepskyblue); /* Standard syntax (must be last) */
-  }
-  div {
-    display: block;
-    width: 485px;
-    padding: 10px;
-    border: 2px solid blue;
-    margin: 0;
-    color: white;
-  }
-  div.gallery {
-    margin: 5px;
-    border: 1px solid dodgerblue;
-    float: left;
-    width: 500px;
-  }
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <style>
+    html,
+    body {
+      height: 100%;
+      color: #1E90FF;
+    }
 
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
+  </style>
 
-  div.desc {
-    padding: 5px;
-    text-align: center;
-  }
-  img {
-    opacity: 1.0;
-    filter: alpha(opacity=50);
-  }
-
-  img:hover {
-    opacity: 0.5;
-    filter: alpha(opacity=100); /* For IE8 and earlier */
-  }
-</style>
 </head>
 <body background="fon.png">
+<div>
+  <div class="wrapper">
 
-<nav class="top-menu">
-  <ul class="menu-main">
-    <li class="left-item"><a href="index.html">Головна</a></li>
-    <li class="left-item"><a href="katalog.html">Каталог</a></li>
-    <li class="left-item"><a href="vilhuk.html">Відгуки</a></li>
-    <li class="right-item"><a href="">Контакти</a></li>
-    <li class="right-item"><a href="">Корзина</a></li>
-    <li class="right-item"><a href="">Аксесуари</a></li>
+    <header>
+      <img src="кросовок.png"  align="left" width="130" height="75">
+      <div align="center"><img src="logo1.png"  width="250" height="100" align="center"></div>
+
+      <div id="id01" class="modal">
+        <img src="кросовок.png"  align="left" width="130" height="75">
+        <div align="center"><img src="logo1.png"  width="250" height="100" align="center"></div>
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Реєстрація</h1>
+            <hr>
+            <label for="email"><b><p>Електрона адреса</p></b></label>
+            <input type="text"  name="email" required>
+
+            <label for="psw"><b><p>Пароль</p></b></label>
+            <input type="password"  name="psw" required>
+
+            <label for="psw-repeat"><b><p>Повторіть пароль</p></b></label>
+            <input type="password"  name="psw-repeat" required>
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Запам'ятати мене
+            </label>
+
+
+
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><p>Відміна</p></button>
+              <button type="submit" class="signupbtn"><p>Реєстрація</p></button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+  </div>
+
+
+  <div id="id02" class="modal2">
+    <img src="кросовок.png"  align="left" width="130" height="75">
+    <div align="center"><img src="logo1.png"  width="250" height="100" align="center"></div>
+
+    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal1">&times;</span>
+    <form class="modal1-content animate" action="/action_page.php">
+      <!--<div class="imgcontainer">
+
+
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>-->
+
+      <div class="container">
+        <label for="uname"><b><p>Ім'я</p></b></label>
+        <input type="text" placeholder="Ім'я" name="Логін" required>
+
+        <label for="psw"><b><p>Пароль</p></b></label>
+        <input type="password" placeholder="Введіть пароль" name="Пароль" required>
+
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember"><p>Запам'ятати мене</p>
+        </label>
+        <span class="psw">Забули <a href="#">пароль?</a></span>
+      </div>
+
+      <div class="container">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn"><p>Відміна</p></button>
+        <button type="submit"><p>Увійти</p></button>
+
+      </div>
+    </form>
+  </div>
+
+
+      <nav  class="top-menu">
+       <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>-->
+        <ul class="menu-main">
+          <li class="left-item"><a  href="index.html">Головна</a></li>
+          <li class="left-item"><a href="katalog.html">Каталог</a></li>
+          <li class="left-item"><a href="vilhuk.html">Відгуки</a></li>
+          <!--<a href="javascript:void(0)" class="top-menu button left-item right-item hide-large hide-medium" onclick="myFunction()">&#9776;</a>-->
+
+          <!--</div>Контакти</a></li>
+          <li class="right-item"><a href="">Корзина</a></li>
+                    <li class="right-item"><a href="spysokfoto.html">Аксесуари</a></li>-->
+          <li class="right-item"><a href="">  <div> <form class="navbar-form navbar-left" action="/action_page.php" align="left">
+            <div class="input-group">  <li class="input-group-btn">
+          <input type="text" class="form-control" placeholder="Search" name="search"></li>
+          <li class="right-item"><a href="#"><span class="glyphicon glyphicon-log-in" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><img  src="вхід.png" title="Вхід"></span></a></li>
+          <li class="right-item"><a href="#"><span class="glyphicon glyphicon-user" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img  src="логін.png" title="Реєстрація"></span> </a></li>
+
+          <!-- <button class="btn btn-default" type="submit"></button>-->
+  </div>
+  </div>
   </ul>
-  <a class="navbar-logo" href=""><img src="кросовок.png" width="130" height="75"></a>
-</nav>
-<br>
-<div class="gallery">
-  <a target="_blank" href="5d0a892b0ebc6de6e1ca2a019f40.jpg">
-    <img src="5d0a892b0ebc6de6e1ca2a019f40.jpg" alt="5d0a892b0ebc6de6e1ca2a019f40.jpg" width="600" height="400">
-  </a>
 
-  <div id="grad1" class="desc">Кросівки для хлопчика</div></div>
+<a class="navbar-logo" href=""><img src="кросовок.png" width="130" height="75"></a>
+  </nav>
+
+
+
+
+    </header>
+
+  </div>
+</div>
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 col-xs-12">
+        <div class="container">
+        <div class="gallery">
+
+          <a target="_blank" href="54be686e8d9bf89e1a147fee0286.jpg">
+
+            <img src="54be686e8d9bf89e1a147fee0286.jpg" height="100%">
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Some text in the modal.</p>
+
+                    <img src="завантаження.jpg" alt="Cinque Terre" style="25%">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" aligne="rihgt" style="height: 40px; width: 150px " >Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </a>
+
+
+
+          <a href="#win2" class="button button-blue"><p><i>Опис</i></p> </a>
+          <a href="1.html" class="button button-blue"> <p>Детально</p></a>
+
+          <a href="#x" class="overlay" id="win2"></a>
+          <div class="popup">
+            <img src="54be686e8d9bf89e1a147fee0286.jpg" style="width:25%">
+            <div> <p> Дитячі кросівки серії New Balance. Дуже зручні та стильні. Щоб отримати детальну інформацію тисніть "Детально"</p>
+
+                           <a class="close" title="Закрыть" href="#close"></a>
+              <a href="#close" id="stop" title="Закрыть" class="close"></a>
+
+             <!-- <button class="open-button" onclick="openForm()">Open Form</button>
+              <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <h1>Login</h1>
+
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+
+                  <button type="submit" class="btn">Login</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+              </div>-->
+            </div>
+          </div>
+
+          <!--<div id="grad1" class="desc"><p>Купити</p></div>-->
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="col-md-3 col-xs-12">
+        <div class="container">
+        <div class="gallery">
+          <a target="_blank" href="a4dfd69d07f4d598d63872703cfc.jpg">
+            <img src="a4dfd69d07f4d598d63872703cfc.jpg"   alt="a4dfd69d07f4d598d63872703cfc.jpg" height="100%" >
+
+
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog2">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Some text in the modal.</p>
+
+                    <img src="завантаження.jpg" alt="Cinque Terre" style="25%">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" aligne="rihgt" style="height: 40px; width: 150px " >Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </a>
+
+
+
+
+
+          <a href="#win2" class="button button-blue"><p><i>Опис</i></p> </a>
+          <a href="2.html" class="button button-blue"> <p>Детально</p></a>
+
+          <a href="#x" class="overlay1" id="#win2"></a>
+          <div class="popup">
+            <img src="a4dfd69d07f4d598d63872703cfc.jpg" style="width:25%">
+            <div> <p>и вище фону.Код являє собою витримку з сценарію, використовуваного для запуску розширення ModalPopup нікна – отримує індекс по осі z трохи вище фону</p>
+
+              <a class="close" title="Закрыть" href="#close"></a>
+              <a href="#close" id="stop" title="Закрыть" class="close">X</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-xs-12">
+        <div class="container">
+        <div class="gallery">
+          <a target="_blank" href="84b9d49f95668bd4d063335253cf.jpg">
+            <img src="84b9d49f95668bd4d063335253cf.jpg"  alt="84b9d49f95668bd4d063335253cf.jpg" height="100%" >
+
+
+          </a>
+          <a href="#win2" class="button button-blue"><p><i>Опис</i></p> </a>
+          <a href="3.html" class="button button-blue"> <p>Детально</p></a>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3 col-xs-12">
+        <div class="container">
+        <div class="gallery">
+          <a target="_blank" href="a831bc69b016f94b41e1f948ef4f.jpg">
+            <img src="a831bc69b016f94b41e1f948ef4f.jpg"  alt="a831bc69b016f94b41e1f948ef4f.jpg" height="100%">
+          </a>
+          <a href="#win2" class="button button-blue"><p><i>Опис</i></p> </a>
+          <a href="4.html" class="button button-blue"> <p>Детально</p></a>
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="col-md-3 col-xs-12">
+        <div class="container">
+        <div class="gallery">
+          <a target="_blank" href="e50c2fd9240488200acf8fc08ef5.jpg">
+            <img src="e50c2fd9240488200acf8fc08ef5.jpg"  alt="e50c2fd9240488200acf8fc08ef5.jpg" height="100%">
+          </a>
+          <a href="#win2" class="button button-blue"><p><i>Опис</i></p> </a>
+          <a href="5.html" class="button button-blue"> <p>Детально</p></a>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-xs-12">
+        <div class="container">
+        <div class="gallery">
+          <a target="_blank" href="MAIN (1).jpg">
+            <img src="MAIN (1).jpg"  alt="MAIN (1).jpg" height="100%" >
+          </a>
+          <a href="#win2" class="button button-blue"><p><i>Опис</i></p> </a>
+          <a href="6.html" class="button button-blue"> <p>Детально</p></a>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-xs-12">
+        <div class="container">
+        <div class="gallery">
+          <a target="_blank" href="5d0a892b0ebc6de6e1ca2a019f40.jpg">
+            <img src="5d0a892b0ebc6de6e1ca2a019f40.jpg"  alt="5d0a892b0ebc6de6e1ca2a019f40.jpg" height="100%" >
+
+          </a>
+          <a href="#win2" class="button button-blue"><p><i>Опис</i></p> </a>
+          <a href="7.html" class="button button-blue"> <p>Детально</p></a>
+
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+</div>
 </div>
 
-<!--<img src="5d0a892b0ebc6de6e1ca2a019f40.jpg"  width="400" height="300" >-->
 
-<div class="gallery">
-  <a target="_blank" href="54be686e8d9bf89e1a147fee0286.jpg">
-<img src="54be686e8d9bf89e1a147fee0286.jpg"  alt="54be686e8d9bf89e1a147fee0286.jpg" width="600" height="400" >
-  </a>
-  <div id="grad1" class="desc">Кросівки для дівчинки</div>
-</div>
 
-<div class="gallery">
-<a target="_blank" href="84b9d49f95668bd4d063335253cf.jpg">
-  <img src="84b9d49f95668bd4d063335253cf.jpg"  alt="84b9d49f95668bd4d063335253cf.jpg" width="600" height="400" >
-</a>
-<div id="grad1" class="desc">Кросівки для підлітка</div>
+  </div>
 </div>
-<!--<img src="84b9d49f95668bd4d063335253cf.jpg"  width="400" height="300" >--><br>
+<div id="grad1" class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-xs-4" >
+        <a  href="index.html"><p style="color: white">Головна</p></a>
+        <a href="katalog.html"><p style="color: white">Каталог</p></a>
+        <a href="vilhuk.html"><p style="color: white">Відгуки</p></a>
 
-<div class="gallery">
-  <a target="_blank" href="a4dfd69d07f4d598d63872703cfc.jpg">
-<img src="a4dfd69d07f4d598d63872703cfc.jpg"  alt="a4dfd69d07f4d598d63872703cfc.jpg" width="400" height="300" >
-  </a>
-  <div id="grad1" class="desc">Кросівки для підлітка</div>
+
+
+        <p style="color: white">@ Футимська Сніжанна</p>
+
+      </div>
+      <div class="col-md-4 col-xs-4" ><p style="color: #b3d4fc">Знайдіть нас</p>
+        <a href="https://www.facebook.com/" target="_blank"><img src="Facebook_icon-icons.com_66933.png" height="51" width="51"></a>
+        <a href="https://www.instagram.com/?hl=uk" target="_blank"><img src="instagram.png" height="51" width="51">
+          <img src="logo1.png"  width="250" height="100" align="center">
+      </div>
+      <div class="col-md-4 col-xs-4" ><p style="color: white">Наші контакти: +0380951254577<br> email: sportUZsport@gmail.com<br>  </p> <img src="кросовок.png" width="130" height="75">  </div>
+    </div>
+  </div>
 </div>
-<div class="gallery">
-  <a target="_blank" href="a831bc69b016f94b41e1f948ef4f.jpg">
-<img src="a831bc69b016f94b41e1f948ef4f.jpg"  alt="a831bc69b016f94b41e1f948ef4f.jpg" width="400" height="300" >
-  </a>
-  <div  id="grad1" class="desc">Кросівки для хлопчика</div>
 </div>
-<div class="gallery">
-  <a target="_blank" href="e50c2fd9240488200acf8fc08ef5.jpg">
-<img src="e50c2fd9240488200acf8fc08ef5.jpg"  alt="e50c2fd9240488200acf8fc08ef5.jpg" width="400" height="300" >
-</a>
-<div  id="grad1" class="desc">Кросівки для підлітка</div>
-</div>
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+</script>
+
+
 </body>
 </html>
+
